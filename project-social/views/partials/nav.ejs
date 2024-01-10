@@ -1,0 +1,31 @@
+<header class="bg-gray-800 text-white p-4">
+    <!-- Profile Icon -->
+    <a href="/profile">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img
+                src="/images/uploads/<%= User.profileImage %>"
+                alt="Profile Icon"
+                class="w-8 h-8 rounded-full mr-2"
+                />
+                <h2 class="text-lg font-bold"><%= User.username %></h2>
+            </div>
+        </a>
+        
+        <!-- Create Page Button -->
+        <div>
+            <a
+        href="/createPost"
+        class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        >Create Post</a
+        >
+        <a
+        href="/logout"
+        class="text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-800 bg-red-500"
+      >
+        logout
+      </a>
+        </div>
+        
+    </div>
+</header>

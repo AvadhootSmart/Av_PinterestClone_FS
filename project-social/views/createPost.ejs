@@ -1,0 +1,61 @@
+<%include ./partials/header.ejs%>
+<div class="w-full h-screen bg-zinc-800 py-10">
+  <div
+    class="bg-zinc-400 p-8 rounded-lg shadow-md max-w-md w-full mx-auto"
+  >
+    <h1 class="text-2xl font-bold mb-6">Create a Post</h1>
+
+    <form action="/createPost" method="POST" enctype="multipart/form-data">
+      <!-- Image URL -->
+      <div class="mb-4">
+        <label
+          for="postImage"
+          class="block text-gray-700 text-sm font-bold mb-2"
+          >Image:</label
+        >
+        <input
+          type="file"
+          name="postImage"
+          class="w-full border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+
+      <!-- Title -->
+      <div class="mb-4">
+        <label for="title" class="block text-gray-700 text-sm font-bold mb-2"
+          >Title:</label
+        >
+        <input
+          type="text"
+          name="title"
+          class="w-full border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+
+      <!-- Description -->
+      <div class="mb-6">
+        <label
+          for="description"
+          class="block text-gray-700 text-sm font-bold mb-2"
+          >Description:</label
+        >
+        <textarea
+          name="description"
+          class="w-full border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-end">
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        >
+          Post
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%include ./partials/footer.ejs%>
